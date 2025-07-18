@@ -1,0 +1,8 @@
+n = int(input("First number : "))
+m = int(input("Second number : "))
+print("Addition :",n+m)
+print("Substraction :",n-m)
+print("Multipliaction :",n*m)
+print("Division:",n/m)
+print("Exponential :",n**m)
+print("Thank you!!")
