@@ -5,4 +5,4 @@ while True :
         print('I knew it, I LOVE YOU TOO 😘')
         break
     else:
-        print('Still, I ain\'t gonna leave you 😡')
+        print('I ain\'t gonna leave you 😡')
