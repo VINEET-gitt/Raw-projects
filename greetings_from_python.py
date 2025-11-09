@@ -1,14 +1,14 @@
 # TAKE GREETINGS FROM PYTHON
 import time 
-n = input("Enter your name : ")
-a = time.strftime("%I:%M %p")
-a1 = int(time.strftime("%H"))
-if (a1 >= 0 and a1 < 12):
-    print("Good morning",n)
-elif (a1 >= 12 and a1 < 17):
-    print("Good afternoon",n)
-elif (a1 >= 17 and a1 < 21):
-    print("Good evening",n)
-elif (a1 >= 21 and a1 < 24):
-    print("Good night",n)
-print("It's been",a)
+name = input("Enter your name : ")
+current_time = time.strftime("%I:%M %p")
+hrs = int(time.strftime("%H"))
+if (hrs >= 0 and hrs < 12):
+    print(f"Good morning {name}.")
+elif (hrs >= 12 and hrs < 17):
+    print(f"Good afternoon {name}.")
+elif (hrs >= 17 and hrs < 21):
+    print(f"Good evening {name}.")
+elif (hrs >= 21 and hrs < 24):
+    print(f"Good night {name}.")
+print("It's been",current_time)
