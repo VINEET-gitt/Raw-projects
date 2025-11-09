@@ -1,33 +1,36 @@
 while True:
     try:
-        a = int(input('Enter the first number : '))
-        b = int(input('Enter the second number : '))
-        c = input(f'What operation do you wanna perform with {a} and {b}: ')
-        match c :
+        first_num = int(input('Enter the first number : '))
+        second_num = int(input('Enter the second number : '))
+        opt = input(f'What operation do you wanna perform with {first_num} and {second_num}: ')
+        match opt :
             case '+':
-                print("Addition of",a,"and",b,"is",a+b)
+                print(f"Addition of {first_num} and {second_num} is {first_num+second_num}.")
             case '-':
-                print("Substraction of",a,"and",b,"is",a-b)
+                print(f"Subtraction of {first_num} and {second_num} is {first_num-second_num}")
             case '*':
-                print("Multiplication of",a,"and",b,"is",a*b)
+                print(f"Multiplication of {first_num} and {second_num} is {first_num*second_num}.")
             case '/':
-                if b == 0:
-                    print("Denominator cannot be zero")
+                if second_num == 0:
+                    print(f"Denominator cannot be zero")
                 else:
-                    print("Division of",a,"and",b,"is",a/b)
+                    print(f"Division of {first_num} and {second_num} is {first_num/second_num}.")
             case '**':
-                print("Exponential of",a,"and",b,"is",a**b)
+                print(f"Exponential of {first_num} and {second_num} is {first_num**second_num}.")
             case '//':
-                print("Floor division of",a,"and",b,"is",a//b)
+                print(f"Floor division of {first_num} and {second_num} is {first_num//second_num}.")
             case '%':
-                print("Modulo of",a,"and",b,"is",a%b)
+                print(f"Modulo of {first_num} and {second_num} is {first_num%second_num}.")
             case _:
                 print('Enter the valid arithmetic operator.')
                 continue
-        d = input('Do you want to continue? : ')
-        if d != 'yes':
+        user_exit1 = input('Do you want to continue? : ')
+        user_exit2 = user_exit1.capitalize()
+        if user_exit2.startswith('Y'):
+            continue
+        else:
             print('Hope we will meet again, have a nice day :)')
             break
-    except:
-        print('Enter the valid numbers.')
+    except ValueError:
+        print('Enter the correct integer value.')
         continue
